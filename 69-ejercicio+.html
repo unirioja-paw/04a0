@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW</title>
+  <script type="text/javascript">
+
+    var arr = ['Bea', 'Ana', 'Jon', 'Teo']
+    arr.push('Carlos')
+    for (let n of arr) console.log(n)
+
+    arr.forEach(function (n) { console.log(n) })
+
+    arr = arr.sort()
+
+    console.log(arr)
+
+    console.log(arr.join(','))
+
+    console.log(arr.filter(function (n) { return n.length > 3 }))
+
+  </script>
+</head>
+
+<body>
+  <h1>forEach</h1>
+</body>
+
+</html>

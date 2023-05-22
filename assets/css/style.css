@@ -1,0 +1,26 @@
+body { font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+h1 {
+    color: blue;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+h2 {
+    color: green;
+    font-weight: bold
+}
+
+h3 {
+    color: brown;
+    font-weight: bold
+}
+
+.image-wrapper {
+    text-align: center;
+}
+
+.image-wrapper img {
+    box-shadow: 0 0 10px #aaa;
+    width: 85%;
+}

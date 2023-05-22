@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW</title>
+  <script type="text/javascript">
+
+    function hazArray() {
+      return Array.from(arguments);
+    }
+
+    x = hazArray(1, 2, 3); // [1, 2, 3]
+    console.log(x);
+    // Usando una función de flecha como función para manipular los elementos
+    y = Array.from([1, 2, 3], x => x + x);  // [2, 4, 6]
+    console.log(y);
+
+  </script>
+</head>
+
+<body>
+  <h1>Array.from(…)</h1>
+</body>
+
+</html>

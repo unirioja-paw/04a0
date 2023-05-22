@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW</title>
+  <script>
+    function constante() {
+      const x = {};
+
+      x.foo = 'bar';
+      console.log(x); // {foo : 'bar'}
+
+      x.foo = 'bar2';
+      console.log(x); // {foo : 'bar2'}  
+    }
+
+    function plantillas() {
+      var a = 5;
+      for (let i = 0; i < 10; i++) {
+        console.log(`Cinco mas ${i} es ${a + i}.`);
+      }
+    }
+
+    function diHola(nombre) {
+      return `Hola,
+              ${nombre}`;
+    }
+
+    function indefinido() {
+      var a = ["a", "b", , "d", "e"];
+      for (var i in a) console.log(i); // 0 1 3 4 (falta el 2)
+      console.log('------')
+      for (var v of a) console.log(v); // "a" "b" undefined "d" "e"
+    }
+
+
+    //constante()
+    //plantillas()
+    //console.log(diHola('francisco'))
+    indefinido()
+// alert(x)  // Si se descomenta la línea que pone "CUIDADO" se verá 7	
+  </script>
+</head>
+
+<body>
+  <h1>Hello World!</h1>
+</body>
+
+</html>

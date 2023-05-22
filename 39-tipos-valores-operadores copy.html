@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW: Tipos, valores y operadores</title>
+  <script type="text/javascript">
+    function displayPageInfo() {
+      console.log('Document Title: ' + document.title);
+      console.log('Navigator User Agent: ' + navigator.userAgent);      
+    }
+
+    function checkIguales() {
+      var n = 4;
+      var s = "4";
+
+      if (n == s)
+        console.log("iguales con ==");
+      else
+        console.log("distintos con ==");
+
+      if (n === s)
+        console.log("iguales con ===");
+      else
+        console.log("distintos con ===");
+
+      console.log('type of n: ' + typeof n);
+      console.log('type of s: ' + typeof s);
+    }
+
+    function weakTypingCoerce() {
+      const foo = 42;
+      const result = foo + "1"; // JavaScript coercion
+      console.log('type of foo: ' + typeof foo);
+
+      console.log(result); // 421
+      console.log('type of result: ' + typeof result);
+
+    }
+
+    displayPageInfo()
+
+    checkIguales()
+
+    weakTypingCoerce()
+
+
+  </script>
+
+</head>
+
+<body>
+  <h1>Tipos, valores y operadores</h1>
+
+
+</body>
+
+</html>

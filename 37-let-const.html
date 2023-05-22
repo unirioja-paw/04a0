@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW</title>
+  <script type="text/javascript">
+
+    function f() {
+      if (true) {
+        let x = 1;
+        var y = 'a';
+
+        {
+          // Este x es constante y "vive" en este bloque
+          // No es el x del bloque exterior (el del if)
+          const x = 2;
+          x = 3;           // ERROR: x es const
+          const y = 'b';   // OK, no es el y del bloque exterior
+        }
+        // let x = 4;  // ERROR: ya ha sido definido en el bloque
+        x = 5;      // OK
+        var y = 'c' // OK (aunque ponga var, solo se cambia el valor de y)
+      }
+      x = 7; // CUIDADO: estaríamos declarando una variable global
+      // alert(x) // ERROR: undefined, salvo que se descomente la línea anterior
+      console.log(y) // 'c'
+    }
+
+    f()
+
+    alert(x)  // Si se descomenta la línea que pone "CUIDADO" se verá 7	
+
+
+    function g() {
+      let m;
+      let m; // caught SyntaxError: Identifier 'm' has already been declared (
+
+      var n;
+      var n;
+    }
+
+  </script>
+</head>
+
+<body>
+  <h1>Scopes let y const</h1>
+</body>
+
+</html>

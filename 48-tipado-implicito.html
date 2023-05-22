@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW: Tipos, valores y operadores</title>
+  <script type="text/javascript">
+
+    function unaFuncionCualquiera() {
+
+    }
+
+    function checkTipado() {
+      var nombre = "Hola";
+      const bigNumber = BigInt(9007199254740991);
+
+      if (typeof nombre == 'string')
+        console.log(nombre);
+      if (typeof unaFuncionCualquiera == 'function')
+        console.log(unaFuncionCualquiera);
+      if ('dato' in window)
+        console.log('dato is defined');
+      else
+        console.log('dato is not defined');
+
+      console.log(typeof bigNumber);
+
+    }
+
+
+    checkTipado()
+
+
+  </script>
+
+</head>
+
+<body>
+  <h1>Tipos, valores y operadores</h1>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW</title>
+  <script>
+    function checkDeclaredVar() {
+      var a;
+      console.log(a); // undefined
+      console.log(b); // error
+    }
+
+    function checkUndefinedVar() {
+      if (typeof b != 'undefined')
+        console.log(`Case 1: ${b}`)
+      else
+        console.log('Case 1: ups, typeof b is undefined')
+
+      if (window.b)
+        console.log(`Case 2: ${b}`)
+      else
+        console.log('Case 2: ups, b is not a window property')
+
+      if ('b' in window)
+        console.log(`Case 3: ${b}`)
+      else
+        console.log('Case 3: ups, b is not defined in window')
+    }
+
+    let b;
+
+    // checkDeclaredVar()
+
+    checkUndefinedVar()
+
+  </script>
+</head>
+
+<body>
+  <h1>undefined...</h1>
+</body>
+
+</html>

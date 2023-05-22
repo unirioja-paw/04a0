@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW: Tipos, valores y operadores</title>
+  <script type="text/javascript">
+
+    function bucle_for() {
+      var a = [];
+      a[5] = 5;
+      console.log('Recorriendo con for normal')
+      for (var i = 0; i < a.length; i++) {
+        console.log(`i=${i}, value=${a[i]}`);
+      }
+    }
+
+    function bucle_for_in() {
+      var a = [];
+      a[5] = 5;
+      console.log('Recorriendo con for ... in')
+      for (var x in a) {
+        console.log(`x=${x}`);
+      }
+    }
+
+    function bucle_for_of() {
+      var a = [];
+      a[5] = 5;
+      console.log('Recorriendo con for ... of')
+      for (var x of a) {
+        console.log(`x=${x}`);
+      }
+    }
+
+    function ejemplo_in_of() {
+      var a = ["a", "b", , "d", "e"];
+      for (var i in a) console.log(i);
+
+      console.log('-----')
+      for (var v of a) console.log(v);
+    }
+
+    // bucle_for()
+
+    // bucle_for_in()
+
+    // bucle_for_of()
+    ejemplo_in_of()
+
+
+  </script>
+
+</head>
+
+<body>
+  <h1>Tipos, valores y operadores</h1>
+
+
+</body>
+
+</html>

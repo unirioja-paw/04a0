@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW: Tipos, valores y operadores</title>
+</head>
+
+<body>
+  <h1>Encadenar operaciones</h1>
+
+  <div style="margin-bottom: 300px">
+    <input id="teclea">
+    <div id="mayus">VACIO</div>
+  </div>
+
+  <div style="margin-bottom: 300px">
+    <pre>
+----------------------------------------
+<span id="cowsay-output"></span>
+----------------------------------------
+         ^__^
+         (oo)_______
+          (__)       )/
+              ||----w |
+              ||     ||
+  </pre>
+  </div>
+
+  <script type="text/javascript">
+
+    function example1() {
+      var counter;
+
+      counter =  counter ?? 1; 
+      
+      console.log(`counter= ${counter}`)
+    }
+
+    function example2() {
+      var q = "May the 4th be with you"
+      // var q
+      // if (q == null)
+      //   console.log('q is null, nothing to do')
+      // else {
+      //   console.log('q is not null')
+      //   cowsay(q)
+      // }
+      q && cowsay(q)
+    }
+
+    function cowsay(textMessage) {
+      console.log('Gonna moo')
+      var cowsayOutput = document.getElementById("cowsay-output");
+      cowsayOutput.innerText = textMessage;
+    }
+
+    function example3() {
+      var teclea = document.getElementById("teclea")
+      var divMayus = document.getElementById("mayus")
+      teclea.oninput = function () {
+        var txt = teclea.value
+        divMayus.innerHTML = txt && txt.toUpperCase() || 'VACIO'
+      }
+    }
+
+    // example1()
+
+    // example2()
+
+    example3()
+
+  </script>
+
+
+</body>
+
+</html>

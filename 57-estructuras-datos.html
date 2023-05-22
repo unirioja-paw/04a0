@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAW</title>
+  <script type="text/javascript">
+
+    var guardians1 = ['Gamora', 'Groot', 'Rocket'];
+    var guardians2 = new Array('Gamora', 'Groot');
+    console.log(guardians1)
+    console.log(guardians2)
+
+    var mixto = ['Gamora', 'Groot', 4, 'Rocket'];
+    mixto[10] = 'Drax';
+    console.log(mixto)
+    console.log(mixto[4])
+
+    var enteros = new Array(); // o var enteros = [];
+    enteros[enteros.length] = 5;
+    enteros.push(23); // // Es lo mismo que enteros[enteros.length] = 23
+    console.log(enteros)
+
+
+    function checkDifferenceBetweenArray() {
+      console.log('# checkDifferenceBetweenArray')
+      // escenario 1
+      let a = [],
+        b = new Array()
+      console.log(`a.length=${a.length}`)
+      console.log(`a[0]=${a[0]}`)
+      console.log(`b.length=${b.length}`)
+      console.log(`b[0]=${b[0]}`)
+
+      // escenario 2
+      let c = ['foo', 'bar'],
+        d = new Array('foo', 'bar')
+      console.log(`c.length=${c.length}`)
+      console.log(`c[0]=${c[0]}`)
+      console.log(`d.length=${d.length}`)
+      console.log(`d[0]=${d[0]}`)
+
+      // escenario 3
+      let e = [3]
+      console.log(`e.length=${e.length}`)
+      console.log(`e[0]=${e[0]}`)
+      let f = new Array(3)   // 
+      console.log(`f.length=${f.length}`)
+      console.log(`f[0]=${f[0]}`)
+    }
+
+    checkDifferenceBetweenArray()
+
+  </script>
+
+</head>
+
+<body>
+  <h1>Estructuras de Datos</h1>
+
+
+</body>
+
+</html>
